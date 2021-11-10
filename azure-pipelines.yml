@@ -20,6 +20,12 @@ steps:
     tasks: 'assembleDebug test'
   displayName: gradlew assembleDebug test
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    testRunTitle: 'JUnit Test'
+
 - task: CopyFiles@2
   inputs:
     contents: '**/*.apk'
