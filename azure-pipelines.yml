@@ -43,7 +43,7 @@ steps:
       $ANDROID_HOME/platform-tools/adb devices
       
       echo "Emulator started"
-    failOnStderr: true
+    failOnStderr: false
 
 - task: CopyFiles@2
   inputs:
